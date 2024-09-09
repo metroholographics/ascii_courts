@@ -1,10 +1,9 @@
 import sys
 from wand.image import Image 
-from wand.display import display
 
-img_path = "images/test.jpg"
+img_path = "images/harrykane.jpg"
 
-#ascii_map = '''   `^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$'''
+#ascii_map = ''' .`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$'''
 ascii_map = '''  .:-=+*#%@'''
 
 def load_image(img_path):
@@ -23,9 +22,7 @@ def init_pixel_array(img):
 	
 	new_arr = []
 	for val in range(0, len(raw_px_list), 3):
-		new_arr.append((raw_px_list[val], 
-						raw_px_list[val + 1],
-						raw_px_list[val + 2]))
+		new_arr.append((raw_px_list[val], raw_px_list[val + 1], raw_px_list[val + 2]))
 	return new_arr
 
 def rgb_to_bright(pixel_rgb_list):
